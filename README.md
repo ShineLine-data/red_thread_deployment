@@ -3,6 +3,6 @@ This is a project to deploy the red thread app project as a microservice app usi
 
 git clone https://github.com/ShineLine-data/red_thread_deployment.git
 
-cd my-app-deploy
+cd red_thread_deployment
 
 docker-compose up --build
