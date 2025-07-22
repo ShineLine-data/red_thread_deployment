@@ -1,6 +1,8 @@
 services:
   backend:
-    build: ./Backend/odc
+    build: #./Backend/odc
+      context: https://github.com/ShineLine-data/lineBackend.git
+      dockerfile: ./odc/Dockerfile
     container_name: backend_app
     ports:
       - "8000:8000"
@@ -8,7 +10,9 @@ services:
       - db
 
   frontend:
-    build: ./Frontend
+    build: #./Frontend
+      context: https://github.com/ShineLine-data/lineFrontend.git
+      dockerfile: Dockerfile
     container_name: frontend_app
     ports:
       - "8080:80"
