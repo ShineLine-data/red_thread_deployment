@@ -3,7 +3,7 @@ services:
     build: #./Backend/odc
       context: https://github.com/ShineLine-data/lineBackend.git
       dockerfile: ./odc/Dockerfile2
-    container_name: backend_app
+    container_name: backend_app2
     ports:
       - "8000:8000"
     depends_on:
@@ -13,7 +13,7 @@ services:
     build: #./Frontend
       context: https://github.com/ShineLine-data/lineFrontend.git
       dockerfile: Dockerfile
-    container_name: frontend_app
+    container_name: frontend_app2
     ports:
       - "8080:80"
     depends_on:
