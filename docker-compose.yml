@@ -2,7 +2,7 @@ services:
   backend:
     build: #./Backend/odc
       context: https://github.com/ShineLine-data/lineBackend.git
-      dockerfile: ./odc/Dockerfile
+      dockerfile: ./odc/Dockerfile2
     container_name: backend_app
     ports:
       - "8000:8000"
