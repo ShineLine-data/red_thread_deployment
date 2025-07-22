@@ -33,10 +33,10 @@ services:
 
   migrate:
     build: #./Backend/odc
-      # context: https://github.com/ShineLine-data/lineBackend.git
+      context: https://github.com/ShineLine-data/lineBackend.git
       # test another way
-      context: https://github.com/ShineLine-data/lineBackend.git#main/odc
-      dockerfile: Dockerfile2
+      # context: https://github.com/ShineLine-data/lineBackend.git#main/odc #this doesn't work
+      dockerfile: odc/Dockerfile2
       
     command: python manage.py migrate
     depends_on:
