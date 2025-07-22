@@ -32,7 +32,12 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   migrate:
-    build: ./Backend/odc
+    build: #./Backend/odc
+      # context: https://github.com/ShineLine-data/lineBackend.git
+      # test another way
+      context: https://github.com/ShineLine-data/lineBackend.git#main/odc
+      dockerfile: Dockerfile2
+      
     command: python manage.py migrate
     depends_on:
       - db
